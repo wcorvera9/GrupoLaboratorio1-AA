@@ -1,6 +1,7 @@
 #include <iostream>
 
 // Declaracion de funciones
+void Recargar(double &combustible, double litros);
 // Función para consumir combustible (paso por puntero)
 void ConsumirCombustible(double *combustible, double litros);
 
@@ -42,3 +43,20 @@ void ConsumirCombustible(double *combustible, double litros)
     std::cout << "Consumo exitoso. Se consumieron " << litros << " litros." << std::endl;
     std::cout << "Nivel despues de la operacion: " << *combustible << " L" << std::endl;
 };
+
+//Paso por referencia
+void Recargar(double &combustible, double litros) {
+    if (litros <= 0) {
+        std::cout << "La cantidad de combustible debe ser mayor a 0" << std::endl;
+        return;
+    }
+    if (combustible + litros > 100){
+        std::cout << "No se puede recargar, el tanque esta lleno" << std::endl;
+        return;
+    } 
+        combustible += litros;
+        std::cout << "Se recargo " << litros << std::endl;
+    
+
+
+}
