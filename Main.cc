@@ -8,6 +8,11 @@ void ConsumirCombustible(double *combustible, double litros);
 int main() {
     // Combustible inicial
     double combustible = 50.0;
+  
+    std::cout << "Cantidad inicial de combustible: " << combustible << " litros" << std::endl;
+    // Demostracion 2
+    Recargar (combustible, 30.0); // 30 litros de recarga
+    std::cout << "Cantidad de combustible despues de recargar: " << combustible << " litros" << std::endl;
 
     // Demostración 3: Consumo por puntero (Casos de prueba)
     ConsumirCombustible(&combustible, -5.0);  // Error: Cantidad negativa
