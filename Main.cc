@@ -2,15 +2,22 @@
 using namespace std;
 
 void Recargar(float &combustible, float litros);
+void ConsultarCombustible(float combustible);
 
 int main()
 {
     float combustible = 50.0f;  // combustible inicial del auto
 
-    // Aquí va el código que use las funciones
-
+    ConsultarCombustible(combustible);
     Recargar(combustible, 20.0f);
+    ConsultarCombustible(combustible);
+
     return 0;
+}
+
+void ConsultarCombustible(float combustible)
+{
+    cout << "Nivel de combustible: " << combustible << " litros" << endl;
 }
 
 void Recargar(float &combustible, float litros)
